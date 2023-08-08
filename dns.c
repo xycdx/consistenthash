@@ -308,10 +308,6 @@ static ip_group_t *find_ip_group(node_group_t *node_group, char **eltIDs, int n)
 }
 
 int main() {
-    int a[10];
-    for(long i = 0; i < 4*10; i+=4) {
-        printf("%ld\n", *(a + i));
-    }
     while (1) {
         execute("https://aqiniushare.tangdou.com/202304/20000004959887_H540P.mp4?sign=2b29ed1ecbbf9f341e31ff788d4ca4a2&t=64cd2724", 
                 3, 1, (ip_found_cb)handle_http_request);
