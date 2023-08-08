@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "group.h": "c",
+        "type_traits": "c",
+        "result_data.h": "c",
+        "cache_key_rule.h": "c",
+        "domain_cache.h": "c",
+        "cjson.h": "c",
+        "dns.h": "c",
+        "consistenthash.h": "c",
+        "murmurhasher.h": "c",
+        "stddef.h": "c",
+        "evp.h": "c",
+        "bio.h": "c",
+        "hmac.h": "c",
+        "list.h": "c",
+        "array": "c",
+        "functional": "c",
+        "tuple": "c",
+        "utility": "c",
+        "typeinfo": "c",
+        "http_dns_resolver.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
