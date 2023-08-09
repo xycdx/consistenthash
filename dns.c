@@ -223,7 +223,7 @@ char *get_cache_key(char *url) {
 static void do_resolve_by_ECDN(domain_cache_t *domain_cache, char *url, int attempts, ip_found_cb cb) {
     char *cacheKey = get_cache_key(url);
     node_select_rule_t *nodeSelectRule = &domain_cache->node_select_rules[0];
-    // group_select_t *sorted_rule_groups = sort_random_by_weight(nodeSelectRule->group_select, nodeSelectRule->num_groups);
+    group_select_t *sorted_rule_groups = sort_random_by_weight(nodeSelectRule->group_select, nodeSelectRule->num_groups);
     int k = attempts < nodeSelectRule->num_groups ? attempts : nodeSelectRule->num_groups;
     for (int i = 0; i < k; i++) {
         group_select_t *group = &nodeSelectRule->group_select[i];
