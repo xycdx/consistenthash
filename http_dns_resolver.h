@@ -12,7 +12,7 @@
 #define N_MAX_URL_LEN 256
 
 struct MemoryStruct {
-    char* memory;
+    unsigned char* memory;
     size_t size;
 };
 

@@ -116,13 +116,13 @@ static size_t WriteMemoryCallback(void* contents, size_t size, size_t nmemb, voi
 }
 
 result_data_t *resolve(const char* domain, const char* appID, const char* appSalt) {
-    FILE *fp = fopen("dns.json", "r");
-    char *buffer = malloc(500000);
-    fread(buffer, 1, 500000, fp);
-    result_data_t *ret = get_result_data(buffer);
-    free(buffer);
-    fclose(fp);
-    return ret;
+    // FILE *fp = fopen("dns.json", "r");
+    // char *buffer = malloc(500000);
+    // fread(buffer, 1, 500000, fp);
+    // result_data_t *ret = get_result_data(buffer);
+    // free(buffer);
+    // fclose(fp);
+    // return ret;
 
     char url[N_MAX_URL_LEN];
     snprintf(url, N_MAX_URL_LEN, "%s?name=%s", HTTP_DNS_API, domain);
@@ -183,6 +183,7 @@ result_data_t *resolve(const char* domain, const char* appID, const char* appSal
     curl_global_cleanup();
     return NULL;
 }
+//192 81 122 98 225 85 0 0 144 42 115 98 225 85 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 251 118 109 45 49 51 100 48 102 50 98 97 100 48 53 55 54 102 51 55 97 10
 
 static void json_parse_cacheKey(cJSON* json_obj, cache_key_rule_t *rule) {
     cJSON *json_cacheKey = cJSON_GetObjectItem(json_obj, "cacheKey");

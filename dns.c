@@ -145,7 +145,7 @@ static domain_cache_t *parse_domain_cache_by_ECDN(result_data_t *data, long retr
                 ip_group_t ip_group;
                 ip_group.num_ips = elt->num_ips;
                 ip_group.ips = (char **)malloc(sizeof(char *) * elt->num_ips);
-                for(int k = 0; k < elt->num_ips; k++) {
+                for (int k = 0; k < elt->num_ips; k++) {
                     // printf("%s\n", elt->ips[k]);
                     ip_group.ips[k] = strdup(elt->ips[k]);
                 }
